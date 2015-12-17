@@ -31,7 +31,7 @@ class Raindrop {
   }
 }
 
-class catcher{
+class Catcher{
   color c;
   int diam;
   PVector loc;
@@ -41,6 +41,7 @@ class catcher{
      diam=75;
      loc.x= mouseX;
      loc.y=mouseY;
+     
    }
    
    void display(){

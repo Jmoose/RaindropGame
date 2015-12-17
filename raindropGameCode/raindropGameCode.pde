@@ -1,7 +1,7 @@
 int co=20;
  PVector mouse;
  Raindrop[] r = new Raindrop[co];
-catcher bucket=new catcher; 
+Catcher b =new Catcher(); 
 // On your own, create an array of Raindrop objects instead of just one
 // Use the array instead of the single object
 // You can start out by just using the single Raindrop as you test
