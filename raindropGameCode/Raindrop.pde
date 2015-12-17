@@ -6,7 +6,7 @@ class Raindrop {
   Raindrop(int tdiam) {
     diam=30;
     loc = new PVector(width/2, 50);
-    c=color(0, random(255), random(255));
+    c=color(0, random(150,255), random(10,100));
     vel= PVector.random2D();
     g= new PVector(0,.25);
   }
@@ -29,4 +29,23 @@ class Raindrop {
    return true;
  }else{return false;}
   }
+}
+
+class catcher{
+  color c;
+  int diam;
+  PVector loc;
+   
+   catcher (int tdiam){
+     c=color(0);
+     diam=75;
+     loc.x= mouseX;
+     loc.y=mouseY;
+   }
+   
+   void display(){
+     fill(c);
+     noStroke();
+     ellipse (loc.x,loc.y,diam,diam);
+   }
 }
