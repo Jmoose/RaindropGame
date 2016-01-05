@@ -24,10 +24,12 @@ class Raindrop {
     loc.y=0;
     vel= PVector.random2D();
   }
-  boolean isInContactWith(PVector death) {
- if (loc.dist(death)<diam/2){
+  boolean isInContactWith(Catcher death) {
+ if ( loc.dist()<diam/2){//this shit
    return true;
- }else{return false;}
+ }else{
+   return false;
+    }
   }
 }
 
@@ -36,17 +38,20 @@ class Catcher{
   int diam;
   PVector loc;
    
-   catcher (int tdiam){
+   Catcher (int tdiam,float x,float y ){
      c=color(0);
-     diam=75;
-     loc.x= mouseX;
-     loc.y=mouseY;
+     diam=tdiam;
+    loc= new PVector(mouseX,mouseY);
+
      
    }
    
    void display(){
      fill(c);
      noStroke();
-     ellipse (loc.x,loc.y,diam,diam);
+     ellipse (mouseX,380,diam*2,20);
    }
+  void move(){
+    loc.set(mouseX,380);
+  }
 }
